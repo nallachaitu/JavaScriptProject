@@ -1,0 +1,399 @@
+.formatter_txt{
+	width:100%;
+	height: 100%; 
+	overflow:hidden !important;
+	border:0px solid #000 !important;
+	outline: none !important;
+	text-align:inherit;
+	font-size:11px;
+	vertical-align:middle;
+	padding: 3px 0px 0px 2px;
+	position: absolute;
+	left: 0px;
+}
+
+.cellStyle{
+	font-size : 11px;
+	font-family: arial,sans-serif;
+	position: absolute;
+	background: white !important;
+	color : black;
+	overflow: hidden;
+	left : 0px;
+	top : 0px;
+	text-align: inherit;
+	outline : none;
+	vertical-align:middle;
+}
+
+.inputCell{
+	font-size : 11px;
+	position: absolute;
+	background: white;
+	color : black;
+	border :none;
+	overflow: hidden;
+	left : 0px;
+	top : 0px;
+	text-align: inherit;
+	outline : none;
+	vertical-align:middle;
+	padding : 0px 0px 0px 1px;
+	height: 100% !important;
+	width:100% !important;
+}
+
+.invalidCell{
+	font-size : 11px;
+	position: absolute;
+	background: #d6d4d4;
+	color : black;
+	border :none;
+	overflow: hidden;
+	left : 0px;
+	top : 0px;
+	text-align: inherit;
+	outline : none;
+	vertical-align:middle;
+	padding : 0px 0px 0px 1px;
+	height: 100%;
+	width:100%;
+}
+
+.notional{
+	font-size : 11px;
+	position: absolute;
+	background: white;
+	color : black;
+	border :none;
+	overflow: hidden;
+	left : 0px;
+	top : 0px;
+	text-align: inherit;
+	outline : none;
+	vertical-align:middle;
+	padding : 0px 0px 0px 1px;
+	height: 100%;
+	width:100%;
+}
+
+.dateGridCell{
+	background: white;
+	color : black;
+	border :none;
+	overflow: hidden;
+	height:100%;
+	top:0px;
+	position: absolute;
+	padding : 0px 0px 0px 1px;
+}
+
+.comboBox{
+	width: 100%;
+	height:100%;
+	border:none;
+	outline:none;
+}
+
+.grid{
+	color: black;
+	border:  none;
+	overflow: hidden;
+	position: relative;
+	outline: none;
+}
+
+.noBorder{
+	border :none !important;
+}
+
+.allBlackBorder{
+	border : black 1px solid !important;
+}
+
+.allGrayBorder{
+	border : #b6b6b6 1px solid !important;
+}
+.allGrayDarkBorder{
+	border : #616161 1px solid !important;
+}
+
+.centerText{
+	text-align: center !important;
+}
+
+.blackBorderRight{
+	border-right : black 1px solid;
+}
+
+.grayBorderRight{
+	border-right : #b6b6b6 1px solid;
+}
+
+.backgroundGray{
+	background : #e3e3e3 !important;
+}
+
+.backgroundWhite{
+	background : white !important;
+}
+
+.backgroundNone{
+	background : none;
+}
+
+.nonEditable{
+	background : #d6d4d4;
+}
+
+.currentCell{
+	background : #f2eec9;
+}
+
+.paddingTop{
+	padding-top: 2px;
+}
+
+.paddingRight{
+	padding-right: 2px;
+}
+
+.paddingBottom{
+	padding-bottom: 2px;
+}
+
+
+.paddingLeft{
+	padding-left: 2px;
+}
+
+
+.grid_rfq_title {
+    background: url("../../img/rfq_grid_col_title_bg.gif") repeat-x scroll 0 0 transparent;
+    border: 1px solid #1A1A1A;
+    color: #000000;
+    font-size: 11px !important;
+    position: absolute;
+}
+
+
+
+.contextMenuDiv{
+	background: #F0F0F0 ;
+	overflow: hidden;
+	position: absolute;
+	border: 1px solid gray;
+	width:150px;
+	z-index:100;
+	left:0px;
+	top:0px;
+	text-align: center;
+	font-size: small;
+}
+
+.contextMenuCell {
+	background: white;
+	font-size: 11px;
+	cursor: pointer;
+	text-align : left;
+	padding-left : 8px;
+	padding-top : 5px;
+	padding-bottom : 5px;
+	border-top : 1px dotted #CCCCCC;
+}
+
+.contextMenuCell:hover {
+	background: #404141;
+	font-size: 11px;
+	cursor: pointer;
+	text-align : left;
+	padding-left : 8px;
+	padding-top : 5px;
+	padding-bottom : 5px;
+	color: white;	
+}
+.dropdownDiv{
+	background: #F0F0F0 ;
+	overflow: hidden;
+	position: absolute;
+	border: 1px solid gray;
+	z-index:100;
+	left:0px;
+	top:0px;
+	text-align: center;
+	font-size: small;
+}
+
+.dropdownCell{
+	background: white;
+	font-size: 11px;
+	cursor: pointer;
+	text-align : left;
+	padding-left : 5px;
+	padding-top : 3px;
+	padding-bottom : 3px;
+	border-top : 1px dotted #CCCCCC;
+	padding-right: 5px;
+
+}
+.dropdownCell:hover {
+	background: #404141;
+	font-size: 11px;
+	cursor: pointer;
+	text-align : left;
+	padding-left : 5px;
+	padding-top : 3px;
+	padding-bottom : 3px;
+	color: white;	
+}
+
+.dropdownCellSelected{
+	background: #404141;
+	font-size: 11px;
+	cursor: pointer;
+	text-align : left;
+	padding-left : 5px;
+	padding-top : 3px;
+	padding-bottom : 3px;
+	color: white;	
+}
+
+.dropdownText{
+	font-size : 11px;
+	font-family: arial,sans-serif;
+	position: absolute;
+	color : black;
+	overflow: hidden;
+	left : 0px;
+	top : 0px;
+	text-align: inherit;
+	outline : none;
+	vertical-align:middle;
+	height: 100%;
+	padding-left : 2px;
+}
+
+.drop_down_img{
+	width: 21px;
+	height:15px;
+	top:1px;
+	position: absolute;
+	outline: none;
+	background: url('../img/dn_arw.gif') no-repeat center;
+	vertical-align:middle;
+	right:0px;
+}
+
+.drop_down{
+	padding: 0px 0px 0px 0px;
+	width:100%;
+	height:100%; 
+	overflow:hidden !important;
+	position: absolute;
+	border: none;
+	outline: none;
+	top:0px;
+	vertical-align:middle;
+	background : white;
+}
+
+.toggle{
+	width:100%; 
+	height:100%;
+	overflow:hidden !important;
+	position: absolute;
+	border: none;
+	outline: none;
+	top:0px;
+	background: url('/static/newGrid/img/gradient.gif') repeat-x center top;
+	vertical-align:middle;
+}
+
+.toggleText{
+	height:100%;
+	width:100%; 
+	overflow:hidden !important;
+	position: absolute;
+	border: none;
+	outline: none;
+	background: url('/static/newGrid/img/gradient.gif') repeat-x center top;
+	vertical-align:middle;
+	padding: 2px 0px 0px 2px;
+}
+
+.currencyText{
+	height:100%;
+	width:100%; 
+	overflow:hidden !important;
+	position: absolute;
+	border: none;
+	outline: none;
+	background: url('/static/newGrid/img/gradient.gif') repeat-x center top;
+	vertical-align:middle;
+	padding: 2px 0px 0px 0px;
+	text-align : center;
+}
+.toggleImg{
+	top:2px;
+	position: absolute;
+	outline: none;
+	background: url('/static/newGrid/img/toggle_button.png') no-repeat right top;
+	vertical-align:middle;
+	left:auto !important;
+	right:3px !important;
+}
+
+.toggleImgFocus{
+	top:2px;
+	position: absolute;
+	outline: none;
+	background: url('/static/newGrid/img/toggle_button_hover.png') no-repeat right top;
+	vertical-align:middle;
+	left:auto !important;
+	right:3px !important;
+}
+
+.vert_center{
+	padding-top : 10px;	
+}
+
+.headerBig{
+	background: url('/static/newGrid/img/grid_gradient_big.gif') repeat-x center top !important;
+}
+
+.headerSmall{
+	background: url('/static/newGrid/img/grid_gradient_small.gif') repeat-x center top  !important;
+}
+
+.centerText{
+	text-align:center;
+}
+
+.analysisHeader{
+	background:url(../img/grid_gradient_big.gif) repeat-x bottom !important;
+	border:#808080 1px solid;
+	font-size:11px;
+	font-weight:bold;
+	border-right:1px solid #373737;
+	text-align:left;
+	color: #000;
+	position: absolute;
+}
+.delta-vert{
+	margin-top:-3px;
+	padding-left:10px; 
+	float:left;
+}
+
+.ac_input{
+	padding-left : 2px;
+}
+
+.borderError{
+	border : 1px solid red !important;
+	z-index: 100000; 
+}
+
+.highlightCell{
+	border : 1px solid blue !important; 
+}

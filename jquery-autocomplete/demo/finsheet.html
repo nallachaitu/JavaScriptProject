@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+<title>Autocomplete Plugin Demo for Finsheet.com</title>
+<script type="text/javascript" src="../lib/jquery.js"></script>
+<script type='text/javascript' src='../lib/jquery.bgiframe.min.js'></script>
+
+<script type='text/javascript' src='../jquery.autocomplete.js'></script>
+<script type='text/javascript' src='localdata.js'></script>
+<link rel="stylesheet" type="text/css" href="main.css" />
+<link rel="stylesheet" type="text/css" href="../jquery.autocomplete.css" />
+<link rel="stylesheet" type="text/css" href="../lib/thickbox.css" />
+	
+<script type="text/javascript">
+$().ready(function() {
+	function log(event, data, formatted) {
+		$("<li>").html( !data ? "No match!" : "Selected: " + formatted).appendTo("#result");
+	}
+	
+	function formatItem(row) {
+		return row[0] + " (<strong>id: " + row[1] + "</strong>)";
+	}
+	function formatResult(row) {
+		return row[0].replace(/(<.+?>)/gi, '');
+	}
+	
+	$("#suggest1").blur().autocomplete(currency,{
+		minChars: 0,
+		max: 110,
+		autoFill: false,
+		mustMatch: false,
+		matchContains: false,
+		scrollHeight: 220
+	});
+});
+
+function changeOptions(){
+	var max = parseInt(window.prompt('Please type number of items to display:', jQuery.Autocompleter.defaults.max));
+	if (max > 0) {
+		$("#suggest1").setOptions({
+			max: max
+		});
+	}
+}
+
+function changeScrollHeight() {
+    var h = parseInt(window.prompt('Please type new scroll height (number in pixels):', jQuery.Autocompleter.defaults.scrollHeight));
+    if(h > 0) {
+        $("#suggest1").setOptions({
+			scrollHeight: h
+		});
+    }
+}
+
+function changeToMonths(){
+	$("#suggest1")
+		// clear existing data
+		.val("")
+		// change the local data to months
+		.setOptions({data: months})
+		// get the label tag
+		.prev()
+		// update the label tag
+		.text("Month (local):");
+}
+</script>
+	
+</head>
+
+<body>
+
+<h1 id="banner">Autocomplete Plugin Demo for Finsheet.com</h1>
+
+<div id="content">
+	
+	<form autocomplete="off">
+		<p>
+			<label>Choose Currency:</label>
+			<input type="text" id="suggest1" />
+			<input type="button" value="Get Value" />
+			<input type="button" value="Change Max Items" onclick="changeOptions();" />
+			<input type="button" value="Change to Month Data" onclick="changeToMonths();" />
+			<input type="button" value="Change scroll height" id="scrollChange" />
+		</p>
+		<!--p>
+			<label>Month (local):</label>
+			<input type="text" id="month" />
+			<input type="button" value="Get Value" />
+			(Current month is excluded from list)
+		</p>
+		<p>
+			<label>E-Mail (local):</label>
+			<input type="text" id="suggest13" />
+			<input type="button" value="Get Value" />
+		</p>
+		<p>
+			<label>Single Bird (remote):</label>
+			<input type="text" id="singleBirdRemote" />
+			<input type="button" value="Get Value" />
+		</p>
+		<p>
+			<label>Hidden input</label>
+			<input />
+		</p>
+		<p>
+			<label>Single City (contains):</label>
+			<input type="text" id="suggest14" />
+			<input type="button" value="Get Value" />
+		</p>
+		<p>
+			<label>Multiple Cities (local):</label>
+			<textarea id='suggest3' cols='40' rows='3'></textarea>
+			<input type="button" value="Get Value" />
+		</p>
+		<p>
+			<label>Multiple Birds (remote):</label>
+			<textarea id='suggest4'></textarea>
+			<input type="button" value="Get Value" />
+		</p>
+		<p>
+			<label>Hidden input</label>
+			<textarea></textarea>
+		</p>
+    <p>
+			<label>Image search (remote):</label>
+			<input type="text" id='imageSearch' />
+			<input type="button" value="Get Value" />
+		</p>
+    <p>
+			<label>Tags (local):</label>
+			<input type="text" id='tags' />
+			<input type="button" value="Get Value" />
+		</p>
+		<p>
+			<label>Some dropdown (&lt;3 IE):</label>
+			<select>
+				<option value="">Item 12334455</option>
+				<option value="2">Item 2</option>
+				<option value="3">Item 3</option>
+				<option value="4">Item 4</option>
+			</select>
+		</p>
+		
+		<input type="submit" value="Submit" />
+	</form>
+	
+	<p>
+		<a href="#TB_inline?height=155&width=400&inlineId=modalWindow" class="thickbox">Click here for an autocomplete inside a thickbox window.</a> (this should work even if it is beyond the fold)
+	</p>		
+	
+	<div id="modalWindow" style="display: none;">
+                <p>
+                        <label>E-Mail (local):</label>
+                        <input type="text" id="thickboxEmail" />
+                        <input type="button" value="Get Value" />
+                </p>
+		</div>
+		
+	<button id="clear">Remove all autocompletes</button>
+	
+	<a href="search.phps">PHP script used to for remote autocomplete</a>
+	
+	<h3>Result:</h3> <ol id="result"></ol-->
+
+</div>
+</body>
+</html>

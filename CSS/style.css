@@ -1,0 +1,539 @@
+html, body{
+	font-family: arial,sans-serif;
+	background:#424240!important;
+}
+.gridDiv .formatter_txt{
+	width:100%;
+	height: 100%; 
+	overflow:hidden !important;
+	border:0px solid #000 !important;
+	outline: none !important;
+	text-align:inherit;
+	font-size:12px;
+	vertical-align:middle;
+	padding: 0;
+	position: absolute;
+	color: white;
+	left: 0px;
+}
+.gridDiv p{
+	cursor: pointer;
+}
+.gridDiv .simpleBigheader{
+	line-height: 42px!important;
+}
+.gridDiv .focusRange{
+	border:1px solid #CECECB !important;
+}
+
+.gridDiv{
+	 font-family: arial;
+	 font-size: 12px!important;
+}
+.gridDiv .cellStyle{
+	font-size : 12px;
+	font-family: arial,sans-serif;
+	position: absolute;
+	background: black;
+	color : white;
+	overflow: hidden;
+	left : 0px;
+	top : 0px;
+	text-align: inherit;
+	outline : none;
+	border:0;
+	line-height:18px;
+	margin:0;
+	vertical-align:middle;
+}
+.gridDiv .checkboxDiv{
+	font-size : 14px;
+	font-family: arial,sans-serif;
+	position: relative;
+	background: black;
+	color : white;
+	overflow: hidden;
+	left : 0px;
+	top : 0px;
+	text-align: center;
+	outline : none;
+	vertical-align:middle;
+	height:100%;
+}
+.gridDiv .checkbox{
+	
+	position: absolute;
+	left : 0px;
+	vertical-align : middle;
+}
+.gridDiv .currencyToggle{
+	cursor: pointer;
+    display: block;
+    float: right;
+    z-index: 2000000;
+	background:url(../img/toggle.png) no-repeat left top;
+}
+
+.gridDiv .inputCell{
+	font-size : 12px;
+	font-family: arial,sans-serif;
+	position: absolute;
+	background: transparent;
+	border :none;
+	line-height:inherit;
+	overflow: hidden;
+	left : 0px;
+	top : 0px;
+	text-align: inherit;
+	outline : none;
+	padding : 0px;
+	height: inherit !important;
+	width:100% !important;
+	color : white;
+}
+
+.gridDiv .invalidCell{
+	font-size : 12px;
+	position: absolute;
+	background: #d6d4d4;
+	color : black;
+	border :none;
+	overflow: hidden;
+	left : 0px;
+	top : 0px;
+	text-align: inherit;
+	outline : none;
+	vertical-align:middle;
+	padding : 0px 0px 0px 1px;
+	height: 100%;
+	width:100%;
+}
+
+.gridDiv .notional{
+	font-size : 12px;
+	position: absolute;
+	color : black;
+	border :none;
+	overflow: hidden;
+	left : 0px;
+	top : 0px;
+	text-align: inherit;
+	outline : none;
+	vertical-align:middle;
+	padding : 0px 0px 0px 1px;
+	height: inherit;
+	width:100%;
+}
+.gridDiv .notional .toggle, .gridDiv .notional .toggle .currencyText{
+	width: 25px!important;
+	font-size: 10px!important;
+	color: #E0B51B;
+	padding: 0!important;
+	cursor: pointer;
+	}
+.gridDiv .notional .toggle{
+	border-left: 1px solid #5A5A58;
+	right: 1px!important;
+	top: 0!important;
+	left: auto!important;
+
+	}
+.gridDiv .dateGridCell{
+	background: none;
+	color : white;
+	border :none;
+	overflow: hidden;
+	height:100%;
+	top:0px;
+	padding : 0px 0px 0px 1px;
+}
+
+.gridDiv .comboBox{
+	width: 100%;
+	height:100%;
+	border:none;
+	outline:none;
+}
+
+.gridDiv .grid{
+	color: black;
+	border:  none;
+	overflow: hidden;
+	position: relative;
+	outline: none;
+}
+
+.gridDiv .noBorder{
+	border :none !important;
+}
+
+.gridDiv .allBlackBorder{
+	border : black 1px solid !important;
+}
+
+.gridDiv .allGrayBorder{
+	border : #b6b6b6 1px solid !important;
+}
+.gridDiv .allGrayDarkBorder{
+	border : #616161 1px solid !important;
+}
+
+.gridDiv .centerText{
+	text-align: center !important;
+}
+
+.gridDiv .blackBorderRight{
+	border-right : black 1px solid;
+}
+
+.gridDiv .grayBorderRight{
+	border-right : #b6b6b6 1px solid;
+}
+
+.gridDiv .backgroundGray{
+	background : #e3e3e3 !important;
+}
+
+.gridDiv .backgroundWhite{
+	background : white !important;
+}
+
+.gridDiv .backgroundNone{
+	background : none;
+}
+
+.gridDiv .nonEditable{
+	background : #d6d4d4;
+}
+
+.gridDiv .dateImage{
+	background : url("../img/date.png");
+	position: absolute;
+}
+
+.gridDiv .currentCell{
+	background : #f2eec9;
+}
+
+.gridDiv .paddingTop{
+	padding-top: 2px;
+}
+
+.gridDiv .paddingRight{
+	padding-right: 2px;
+}
+
+.gridDiv .paddingBottom{
+	padding-bottom: 2px;
+}
+
+
+.gridDiv .paddingLeft{
+	padding-left: 2px;
+}
+
+
+.gridDiv .grid_rfq_title {
+    background: url("../../img/rfq_grid_col_title_bg.gif") repeat-x scroll 0 0 transparent;
+    border: 1px solid #1A1A1A;
+    color: #000000;
+    font-size: 12px !important;
+    position: absolute;
+}
+
+
+
+.contextMenuDiv{
+	background: #F0F0F0 ;
+	overflow: hidden;
+	position: absolute;
+	border: 1px solid gray;
+	width:150px;
+	z-index:100;
+	left:0px;
+	top:0px;
+	text-align: center;
+	font-size: small;
+}
+
+.contextMenuCell {
+	background: #CCCCCC;
+	font-size: 12px;
+	cursor: pointer;
+	text-align : left;
+	padding-left : 8px;
+	padding-top : 5px;
+	padding-bottom : 5px;
+	border-top : 1px solid #5A5A58;
+	color: black;
+}
+
+.contextMenuCell:hover {
+	background: #898989;
+	font-size: 12px;
+	cursor: pointer;
+	text-align : left;
+	padding-left : 8px;
+	padding-top : 5px;
+	padding-bottom : 5px;
+	color: black;	
+}
+.dropdownDiv{
+	background: #F0F0F0 ;
+	overflow: hidden;
+	position: absolute;
+	border: 1px solid gray;
+	z-index:100;
+	left:0px;
+	top:0px;
+	text-align: center;
+	font-size: small;
+}
+
+.dropdownCell{
+	background: #313131;
+	font-size: 12px;
+	color:white;
+	cursor: pointer;
+	text-align : left;
+	padding-left : 5px;
+	padding-top : 3px;
+	padding-bottom : 3px;
+	border-top : 1px dotted #676766;
+	padding-right: 5px;
+
+}
+.dropdownCell:hover {
+	background: #676766;
+	font-size: 12px;
+	cursor: pointer;
+	text-align : left;
+	padding-left : 5px;
+	padding-top : 3px;
+	padding-bottom : 3px;
+	color: white;	
+}
+
+.dropdownCellSelected{
+	background: #676766;
+	font-size: 12px;
+	cursor: pointer;
+	text-align : left;
+	padding-left : 5px;
+	padding-top : 3px;
+	padding-bottom : 3px;
+	color: white;	
+}
+
+.dropdownText{
+	font-size : 12px;
+	font-family: arial,sans-serif;
+	position: absolute;
+	color : white;
+	border:0;
+	background:none;
+	overflow: hidden;
+	left : 0px;
+	top : 0px;
+	text-align: inherit;
+	outline : none;
+	vertical-align:middle;
+	height: 100%;
+	padding :0;
+	line-height:inherit;
+}
+.headerBig.twoLine{
+	line-height: 12px!important;
+	padding-top:5px!important;
+	height:29px!important;
+}
+.drop_down_img{
+	width: 21px;
+	height:inherit;
+	top:1px;
+	position: absolute;
+	outline: none;
+	background: url('../dropdown-ico.jpg') no-repeat center;
+	line-height:inherit;
+	right:0px;
+	cursor:pointer;
+}
+
+.drop_down{
+	padding: 0px 0px 0px 0px;
+	width:100%;
+	height:100%; 
+	overflow:hidden !important;
+	position: absolute;
+	border: none;
+	outline: none;
+	top:0px;
+	vertical-align:middle;
+}
+
+.gridDiv .toggle{
+	width:100%; 
+	height:100%;
+	overflow:hidden !important;
+	position: absolute;
+	border: none;
+	outline: none;
+	top:0px;
+	background: url("../img/grid-header-bg.jpg") repeat-x scroll center center transparent !important;
+	vertical-align:middle;
+	cursor:pointer;
+}
+.gridDiv .checkboxDiv .checkbox{
+	margin: 3px 0 0 3px;
+}
+.gridDiv .toggleText{
+	height:100%;
+	width:100%; 
+	overflow:hidden !important;
+	position: absolute;
+	border: none;
+	outline: none;
+	vertical-align:middle;
+	padding:0 0 0 5px;
+	color:white;
+	text-align: left!important;
+}
+.gridDiv .twoLine .toggleText{
+	height:100%;
+	width:100%; 
+	overflow:hidden !important;
+	position: absolute;
+	border: none;
+	outline: none;
+	vertical-align:middle;
+	padding:5px 0 0 5px!important;
+	color:white;
+	text-align: left!important;
+}
+.gridDiv .currencyText{
+	height:100%;
+	width:100%; 
+	overflow:hidden !important;
+	position: absolute;
+	border: none;
+	outline: none;
+	vertical-align:middle;
+	padding: 2px 0px 0px 0px;
+	text-align : center;
+}
+.gridDiv .toggleImg{
+	top:0px;
+	position: absolute;
+	outline: none;
+	background: url('../img/toggle.png') no-repeat right center;
+	vertical-align:middle;
+	left:auto !important;
+	right:3px !important;
+	width: inherit!important;
+	height: inherit!important;
+	line-height: inherit!important;
+}
+
+.gridDiv .toggleImgFocus{
+	top:0px;
+	position: absolute;
+	outline: none;
+	background: url('../img/toggle.png') no-repeat right center;
+	vertical-align:middle;
+	left:auto !important;
+	right:3px !important;
+	width: inherit!important;
+	height: inherit!important;
+	line-height: inherit!important;
+}
+
+.gridDiv .vert_center{
+	vertical-align:middle;
+	
+}
+.gridDiv .headerBig{
+	background:#313131!important;
+	vertical-align:middle;
+	line-height:35px;
+}
+
+.gridDiv .headerBig.nonEditable{
+	background: url('../img/grid-header-bg.jpg') repeat-x center top !important;
+	vertical-align:middle;
+	line-height:35px;
+}
+
+.gridDiv .headerSmall.nonEditable{
+	background: url('../img/grid-header-bg.jpg') repeat-x center top !important;
+	line-height: 17px;
+}
+.gridDiv .headerMedium.nonEditable{
+	background: url('../img/grid-header-bg.jpg') repeat-x center top !important;
+	line-height: 20px;
+}
+.gridDiv .centerText{
+	text-align:center;
+}
+
+.gridDiv .analysisHeader{
+	background:url(../img/grid_gradient_big.gif) repeat-x bottom !important;
+	border:#808080 1px solid;
+	font-size:12px;
+	font-weight:bold;
+	border-right:1px solid #373737;
+	text-align:left;
+	color: #000;
+	position: absolute;
+}
+.gridDiv .delta-vert{
+	margin-top:-3px;
+	padding-left:10px; 
+	float:left;
+}
+
+.gridDiv .ac_input{
+	padding-left : 2px;
+}
+.gridDiv p{
+	color:#e0b51b!important;
+	text-decoration:underline;
+	line-height:18px!important;
+	margin: 0!important;
+	width:inherit!important;
+	padding: 0!important;
+}
+.gridDiv .borderError{
+	border : 1px solid red !important; 
+}
+
+.gridDiv .highlightCell{
+	border : 1px solid blue !important;
+}
+
+
+.nonEditEvenGridCellBorder{
+	font-size : 12px;
+	position: absolute;
+	background: #8E8E8E !important;
+	color : black;
+	border :#8E8E8E 1px solid;
+	overflow: hidden;
+	left : 0px;
+	top : 0px;
+	outline : none;
+	text-align: inherit;
+	line-height:19px!important;
+}
+.nonEditOddGridCellBorder{
+	font-size : 12px;
+	position: absolute;
+	background: #777777 !important;
+	color : black;
+	border :#777777 1px solid;
+	overflow: hidden;
+	left : 0px;
+	top : 0px;
+	outline : none;
+	text-align: inherit;
+	line-height:19px!important;
+}

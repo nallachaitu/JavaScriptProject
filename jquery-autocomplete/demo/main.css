@@ -1,0 +1,41 @@
+
+body {
+	color: #202020;
+}
+
+h1 {
+	color: #fff;
+	padding: 10px;
+	font-size: 200%;
+}
+
+h2 {
+	color: #000;
+	font-size: 150%;
+	padding: 10px 0;
+}
+
+h3 {
+	color: #000;
+	font-size: 120%;
+	padding: 10px 0;
+}
+
+ul {
+	list-style: disc inside;
+	margin-left: 1em;
+}
+
+#content {
+	padding: 10px;
+}
+
+label {
+	float: left;
+	width: 12em;
+}
+input[type=text] { width: 6em; }
+
+#banner { padding: 15px; background-color: #06b; color: white; font-size: large; border-bottom: 1px solid #ccc;
+    background: url(bg.gif) repeat-x; text-align: center }
+#banner a { color: white; }
