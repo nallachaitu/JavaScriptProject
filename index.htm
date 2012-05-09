@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Untitled Page</title>
+    <link rel="stylesheet" href="./gridStyle.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="CSS/style.css" type="text/css" media="screen" charset="utf-8" />
+    <script language="javascript" type="text/javascript">
+ 
+var grid1;
+var grid2;
+var _isCellShiftDrag = false;
+var _isCut;
+
+function createEmptyGrid() {
+		document.onkeydown=trapKeyFn;
+	        document.onkeyup=trapUpKeyFn;
+
+
+		grid1 = new clsDionGrid();
+		grid1.setParentDivElement($(".mainDiv")[0]);
+		grid1.init("#grid1", {
+					rows : 6,
+					cols : 4,
+					height :1500,
+					width :1200,
+					hasAutoWidth: true,
+					hasAutoHeight:true,
+					minWidth : 100,
+					maxWidth : 1200,
+					minHeight: 60,
+					defaultRowGap : 2,
+					defaultColGap : 2,
+					maxHeight: 1200,
+					showContextMenu:true,
+					showInterpolationDiv:true,
+					hideTopPanel:false,
+					defaultEditableCellStyle: "gridCellBorder allBlackBorder",
+					defaultNonEditableCellStyle: "gridCellBorder allBlackBorder grayBackground"
+					}
+		);
+		grid1.setData(2,2,"USD", {value:"USDJPY",currency1 : "USD", currency2 : "JPY"}, "currencyPair");
+		grid1.setData(1,1,"USD", {value:"USDJPY",currency1 : "USD", currency2 : "JPY"}, "currencyPair");
+		grid1.setData(1,2,true, {value:true,text : "1"}, "checkbox");
+		grid1.setData(1,4,"git", {value:"git"}, "input");
+		grid1.setData(1,3,"whats",{value:"whats"},"label");
+		grid1.makeNonEditable("3:3:3:3");
+		grid1.setData(3,1,"1/1/2011" ,{value : "1/1/2011"}, "date");
+		grid1.setData(3,2,"1000" ,{value : "2000", possibleOptions: ["USD", "JPY"], displayValue:"2,000", currentIndex:0}, "notional");
+		grid1.setCellId(4,1, "1strike");
+		grid1.setCellId(4,2, "2strike");
+		grid1.setData(6,1,"1000" ,{value : "2000", dataFormatType : "integer"});
+		grid1.changeDisplayFormat("6:2:6:3", new formatType("percent"));
+		workbook.curDionGrid = grid1;
+		setDionGridNext();
+		
+		
+		grid2 = new clsDionGrid();
+		grid2.setParentDivElement($(".mainDiv2")[0]);
+		grid2.init("#grid2", {
+					rows : 5,
+					cols : 4,
+					height :1500,
+					width :1200,
+					hasAutoWidth: true,
+					hasAutoHeight:true,
+					minWidth : 100,
+					maxWidth : 1200,
+					minHeight: 60,
+					maxHeight: 1200,
+					defaultRowGap : 2,
+					defaultColGap : 2,
+					showContextMenu:true,
+					showInterpolationDiv:true,
+					hideTopPanel:false,
+					defaultEditableCellStyle: "gridCellBorder allBlackBorder",
+					defaultNonEditableCellStyle: "gridCellBorder allBlackBorder grayBackground"
+					}
+		);
+		grid2.setData(2,2,"USD", {value:"USDJPY",currency1 : "USD", currency2 : "JPY"}, "currencyPair");
+		grid2.setData(1,1,"USD", {value:"USDJPY",currency1 : "USD", currency2 : "JPY"}, "currencyPair");
+		grid2.setData(1,2,true, {value:true,text : "1"}, "checkbox");
+		grid2.setData(3,1,"1/1/2011" ,{value : "1/1/2011"}, "date");
+		grid2.makeNonEditable("3:3:3:3");
+		grid1.setRightGrid(grid2,0,0);
+		grid1.setDownGrid(grid2,0,0);
+		grid2.setUpGrid(grid1,0,0);
+		grid2.setLeftGrid(grid1,0,0);
+		
+}
+
+function changeSelectedGrid(i){
+	if (i == 1){
+		workbook.curDionGrid = grid2;
+	}
+	else workbook.curDionGrid = grid1;
+}
+
+//On mouse up handler for the resize, simply sets the current listeners to null
+function OnMouseUp(e) {
+	document.onmousemove = null;
+	document.onmouseup = null;
+	workbook.curDionGrid.clearInterpolation();
+	workbook.curDionGrid.clearDrag();
+	
+}
+
+function setDionGridNext() {
+	var mArray = [];// ["A1","A3","A2","A4","B1","B3","B2","B4","C1","C3","C2","C4"];
+	workbook.curDionGrid.multipleSetNext(mArray);
+
+}
+
+
+function clearDragValues(){
+	_isCellShiftDrag = false;
+}
+</script>
+<title>FinSheet</title>
+</head>
+
+<body onload="createEmptyGrid();">
+    <script src="jquery.min.js"></script>
+    	<script src="gridDefine.js"></script>
+	 <script src="gridAPI.js"></script>
+    	<script src="gridDisplay.js"></script>
+    	<script src="memoryGridCell.js"></script>
+    	<script src="utils.js"></script>
+	<script src="contextMenu.js"></script>
+	<script src="scrollBar.js"></script>
+	<script src="formatDiv.js"></script>
+	<script src="formulaUtils.js"></script>
+	<script src="comboEditValues.js"></script>
+	<script src="errorBox.js"></script>
+	<script src="editors.js"></script>
+	<script src="gridFormat.js"></script>
+	<script src="formatPopupDiv.js"></script>
+	<script src="formatType.js"></script>
+	<script src="map.js"></script>
+	<script src="workbook.js"></script>
+	<script src="datepicker/js/datepicker.js"></script>
+	<script type='text/javascript' src='./jquery-autocomplete/jquery.autocomplete.pack.js'></script>
+	<script type='text/javascript' src='./jquery-autocomplete/jquery.autocomplete.js'></script>
+	<script type='text/javascript' src='jquery.bgiframe.min'></script>
+
+    &nbsp;
+    <div class="mainDiv" style="border:black thin solid;
+        z-index: 1; left: 20px; width: auto;
+        position: absolute; top: 50px; height: auto; overflow: hidden;">
+    </div>
+     <div class="mainDiv2" style="border:black thin solid;
+        z-index: 1; left: 800px; width: auto;
+        position: absolute; top: 50px; height: auto; overflow: hidden;">
+    </div>
+	
+</body>
+
+
+</html>
